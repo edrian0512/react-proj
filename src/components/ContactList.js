@@ -9,23 +9,23 @@ import Paper from '@mui/material/Paper';
 
 const ContactList = (props) => {
 
-    const contactList = [
-        {
-            name: 'Edrian',
-            email: 'mr.edrian@gmail.com',
-            message: 'Hello Lipa!'
-        },
-        {
-            name: 'Ericka',
-            email: 'ericka@gmail.com',
-            message: 'Hello Batangas!'
-        },
-        {
-            name: 'Ohyie',
-            email: 'ohyie@gmail.com',
-            message: 'Hello Philippines'
-        }
-    ]
+    // const contactList = [
+    //     {
+    //         name: 'Edrian',
+    //         email: 'mr.edrian@gmail.com',
+    //         message: 'Hello Lipa!'
+    //     },
+    //     {
+    //         name: 'Ericka',
+    //         email: 'ericka@gmail.com',
+    //         message: 'Hello Batangas!'
+    //     },
+    //     {
+    //         name: 'Ohyie',
+    //         email: 'ohyie@gmail.com',
+    //         message: 'Hello Philippines'
+    //     }
+    // ]
 
     return (
 
