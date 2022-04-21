@@ -27,36 +27,9 @@ const ContactList = () => {
         }
     ]
 
-    // const contact = contactList.map((item, index) => {
-    //     return (<tr key={index}>
-    //         <td>
-    //             {item.name}
-    //         </td>
-    //         <td>
-    //             {item.email}
-    //         </td>
-    //         <td>
-    //             {item.message}
-    //         </td>
-    //     </tr>)
-    // })
-
-
     return (
 
         <div>
-            {/* <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Message</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {contact}
-                </tbody>
-            </table> */}
 
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
