@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import ContactList from './ContactList';
 
 const contactInfo = (localStorage.getItem('contactDetails')) ? JSON.parse(localStorage.getItem('contactDetails')) : [];
 
@@ -6,8 +7,7 @@ const ContactForm = () => {
 
     const [contactList, setContactList] = useState(contactInfo);
 
-
-    console.log(contactList)
+    // console.log(contactList)
 
     const firstNameRef = useRef();
     const lastNameRef = useRef();
@@ -22,7 +22,7 @@ const ContactForm = () => {
         const contactObject = {
             id: Date.now(),
             fName: firstNameRef.current.value,
-            lname: lastNameRef.current.value,
+            lName: lastNameRef.current.value,
             emailAd: emailRef.current.value,
             msg: messageRef.current.value
         }
@@ -32,7 +32,7 @@ const ContactForm = () => {
         // list.push(contactObject);
         setContactList([...contactList, contactObject]);
         localStorage.setItem('contactDetails', JSON.stringify(contactList));
-        
+
         console.log(contactObject)
 
         firstNameRef.current.value = '';
@@ -67,6 +67,7 @@ const ContactForm = () => {
 
                 <input type='submit' value='Submit' name='submit' />
             </form>
+            <ContactList contactsMap={contactList} />
         </div>
     )
 }

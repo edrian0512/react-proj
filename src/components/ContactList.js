@@ -7,7 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-const ContactList = () => {
+const ContactList = (props) => {
 
     const contactList = [
         {
@@ -41,16 +41,16 @@ const ContactList = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {contactList.map((row, index) => (
+                        {props.contactsMap.map((row) => (
                             <TableRow
-                                key={index}
+                                key={row.id}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
 
-                                <TableCell align="center">{row.name}</TableCell>
+                                <TableCell align="center">{row.fName} {row.lName}</TableCell>
 
-                                <TableCell align="center">{row.email}</TableCell>
+                                <TableCell align="center">{row.emailAd}</TableCell>
 
-                                <TableCell align="center">{row.message}</TableCell>
+                                <TableCell align="center">{row.msg}</TableCell>
 
                             </TableRow>
                         ))}
